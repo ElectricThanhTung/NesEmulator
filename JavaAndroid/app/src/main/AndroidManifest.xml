@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.electricthanhtung.nes"
+    tools:ignore="MissingLeanbackLauncher">
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/nes_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".NesApplication"
+        android:theme="@style/Theme.NES">
+        <activity
+            android:name=".GameList"
+            android:exported="true"
+            android:icon="@drawable/nes_app_icon"
+            android:banner="@drawable/nes_app_banner"
+            android:logo="@drawable/nes_app_icon"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NesPlayActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Design.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>
